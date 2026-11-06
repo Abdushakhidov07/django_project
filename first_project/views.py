@@ -3,12 +3,24 @@ from django.http import HttpResponse
 
 
 
-def say_hello(request):
-    name = request.GET.get('name', 'Guest')
-    return HttpResponse(f"<h1 style=color:blue >Hello world {name}</h1>")
+
+
+def home_page(request):
+    context = { 
+        'name': 'Abdullo',
+        'age': 20,
+        }
+    return render(request, 'index.html', context)
 
 
 
 
-def get_name(request, name):
-    return HttpResponse(f"<h1 style=color:blue >Hello world {name}</h1>")
+def profile_page(request):
+    context = { 
+    'username':'Abdullopromax',
+    'model': 'X6',
+    'RAM': "16"
+        }
+    return render(request, 'profile.html', context)
+
+
