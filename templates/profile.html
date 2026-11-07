@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="{% static 'home.css' %}">
 </head>
 <body>
+    {%for prod in products%}
     <div class="div1">
-<h1>username: {{username}}</h1>
-<h1>model: {{model}}</h1>
-<h1>Ram: {{RAM}}</h1>
-<button><a href="http://127.0.0.1:8000/home">Back</a></button>
+    <h1>Name: {{prod.name}}</h1>
+    <h1>stock: {{prod.stock}}</h1>
+    <h1>price: {{prod.price}}</h1>
+    {% endfor %}
 </div>
 
 </body>

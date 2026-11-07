@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Products</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="name" placeholder="Name" required>
+        <input type="number" name="count" placeholder="Count" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <button type="submit">Save</button>
+    </form>
+
+    
+</body>
+</html>
