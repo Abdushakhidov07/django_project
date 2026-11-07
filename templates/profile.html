@@ -11,8 +11,8 @@
     {%for prod in products%}
     <div class="div1">
     <h1>Name: {{prod.name}}</h1>
-    <h1>stock: {{prod.stock}}</h1>
     <h1>price: {{prod.price}}</h1>
+    <button><a href="http://127.0.0.1:8000/show_produccts_id/{{prod.id}}">Подробнее</a></button>
     {% endfor %}
 </div>
 

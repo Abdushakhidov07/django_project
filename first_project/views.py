@@ -36,3 +36,8 @@ def add_products(request):
         
     
         
+
+def get_products_id(request, id):
+    products = Products.objects.get(pk = id)
+    return render(request, 'showproduct_id.html', {"products": products})
+
