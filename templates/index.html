@@ -1,17 +1,9 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'home.css' %}">
-</head>
-<body>
-    <div class="div1">
+
+{% block content %}
+<div class="div1">
 <h1>Name: {{name}}</h1>
 <h1>Age: {{age}}</h1>
 <button><a href="http://127.0.0.1:8000/add_product">add product </a></button>
-</div>
-</body>
-</html>
+{% endblock %}
